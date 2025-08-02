@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.resq.controller.RegistrationController2">
+
+    <children>
+        <Label text="📝 Sign Up - ResQ"
+               style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+        <TextField fx:id="nameField" promptText="Full Name"
+                   style="-fx-background-radius: 8; -fx-padding: 8; -fx-background-color: #f1f1f1; -fx-pref-width: 250;"/>
+
+        <TextField fx:id="emailField" promptText="Email"
+                   style="-fx-background-radius: 8; -fx-padding: 8; -fx-background-color: #f1f1f1; -fx-pref-width: 250;"/>
+
+        <PasswordField fx:id="passwordField" promptText="Password"
+                       style="-fx-background-radius: 8; -fx-padding: 8; -fx-background-color: #f1f1f1; -fx-pref-width: 250;"/>
+
+        <TextField fx:id="ageField" promptText="Age"
+                   style="-fx-background-radius: 8; -fx-padding: 8; -fx-background-color: #f1f1f1; -fx-pref-width: 250;"/>
+
+        <TextField fx:id="parentMobileField" promptText="Parent's Mobile Number"
+                   style="-fx-background-radius: 8; -fx-padding: 8; -fx-background-color: #f1f1f1; -fx-pref-width: 250;"/>
+
+        <ComboBox fx:id="bloodGroupCombo" promptText="Select Blood Group"
+                  style="-fx-background-radius: 8; -fx-pref-width: 250;"/>
+
+        <Button text="Sign Up" onAction="#handleRegister"
+                style="-fx-background-color: #00bfa5; -fx-text-fill: white; -fx-font-size: 16px;
+                       -fx-font-weight: bold; -fx-background-radius: 8; -fx-pref-width: 250;"/>
+
+        <Label fx:id="statusLabel" textFill="red" visible="false"/>
+
+        <!-- ✅ Back to Login -->
+        <Button text="Already have an account? Login" onAction="#handleGoToLogin"
+                style="-fx-background-color: transparent; -fx-text-fill: #2c3e50; -fx-underline: true;"/>
+    </children>
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+</VBox>

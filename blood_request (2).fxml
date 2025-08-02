@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.resq.controller.BloodRequestController"
+      style="-fx-background-color: linear-gradient(to bottom, #ffebee, #ffffff);"
+      prefWidth="400" prefHeight="400">
+
+    <children>
+        <Label text="🩸 Emergency Blood Request"
+               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #d32f2f;"/>
+
+        <!-- ✅ Blood Group Selection -->
+        <ComboBox fx:id="bloodGroupCombo" promptText="Select Blood Group"
+                  style="-fx-background-radius: 8; -fx-pref-width: 250;"/>
+
+        <!-- ✅ Location Field -->
+        <TextField fx:id="locationField" promptText="Enter Location"
+                   style="-fx-background-radius: 8; -fx-padding: 8; -fx-background-color: #f1f1f1; -fx-pref-width: 250;"/>
+
+        <!-- ✅ Request Button -->
+        <Button text="Request Blood" onAction="#handleBloodRequest"
+                style="-fx-background-color: #d32f2f; -fx-text-fill: white; -fx-font-size: 16px;
+                       -fx-font-weight: bold; -fx-background-radius: 8; -fx-pref-width: 200;"/>
+
+        <!-- ✅ Status Label -->
+        <Label fx:id="statusLabel" textFill="green" visible="false"/>
+    </children>
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+</VBox>

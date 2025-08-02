@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Main" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.resq.Main" />
+    <module name="ResQApp" />
+    <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Anwer Hosen Nur\Downloads\openjfx-24.0.1_windows-x64_bin-sdk (1)\javafx-sdk-24.0.1\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

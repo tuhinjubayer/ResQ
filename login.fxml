@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.effect.DropShadow?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.resq.controller.LoginController"
+            style="-fx-background-color: linear-gradient(to bottom, #e0f7fa, #ffffff);">
+
+    <StackPane AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+               AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <VBox spacing="30" alignment="CENTER">
+
+            <!-- 🏷️ Title -->
+            <Label text="Welcome to ResQ"
+                   style="-fx-font-size: 38px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+            <!-- 🧩 Login Form -->
+            <VBox maxWidth="420" minWidth="320"
+                  style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 40;"
+                  alignment="CENTER">
+
+                <VBox spacing="20" alignment="CENTER">
+
+                    <!-- ✅ Login text -->
+                    <Label text="Login"
+                           style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+                    <TextField fx:id="usernameField" promptText="Email"
+                               style="-fx-background-radius: 8; -fx-padding: 10; -fx-background-color: #f1f1f1; -fx-pref-width: 100%;" />
+
+                    <PasswordField fx:id="passwordField" promptText="Password"
+                                   style="-fx-background-radius: 8; -fx-padding: 10; -fx-background-color: #f1f1f1; -fx-pref-width: 100%;" />
+
+                    <!-- 🔘 Button Row -->
+                    <HBox spacing="20" alignment="CENTER">
+                        <Button text="Login" onAction="#handleLogin"
+                                style="-fx-background-color: #00bfa5; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-pref-width: 120;" />
+
+                        <Button text="Sign Up" onAction="#handleGoToSignUp"
+                                style="-fx-background-color: #ffffff; -fx-border-color: #00bfa5; -fx-text-fill: #00bfa5; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-radius: 8; -fx-pref-width: 120;" />
+                    </HBox>
+
+                    <Label fx:id="errorLabel" textFill="red" visible="false"/>
+                </VBox>
+
+                <!-- Shadow -->
+                <effect>
+                    <DropShadow radius="10" offsetX="0" offsetY="5" color="#00000033"/>
+                </effect>
+            </VBox>
+        </VBox>
+    </StackPane>
+</AnchorPane>
